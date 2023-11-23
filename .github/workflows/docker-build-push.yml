@@ -9,7 +9,7 @@ jobs:
   call-workflow-dockerhub-build-push:
     uses: NelsonDane/DockerHub-Actions/.github/workflows/dockerhub_build_push.yml@main
     with:
-      dockerhub_repo_name: 'nelsondane/duplicacy-docker'
+      dockerhub_repo_name: duplicacy-docker
       image_tag: latest
       should_push: true
       platforms: linux/amd64,linux/arm64
