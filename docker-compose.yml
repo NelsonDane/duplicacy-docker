@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  duplicacy:
+    image: nelsondane/duplicacy-docker:latest
+    # build: .
+    container_name: duplicacy
+    restart: always
+    ports:
+      - 3875:3875
+    network_mode: host
+    hostname: duplicacy-web-docker
+    environment:
+      - MACHINE_ID=bad478c8260021d90e0452cb636031zz

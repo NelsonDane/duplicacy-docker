@@ -1,0 +1,18 @@
+name: Docker Build and Push
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  call-workflow-dockerhub-build-push:
+    uses: NelsonDane/DockerHub-Actions/.github/workflows/dockerhub_build_push.yml@main
+    with:
+      dockerhub_repo_name: duplicacy-docker
+      image_tag: latest
+      should_push: true
+      platforms: linux/amd64,linux/arm64
+    secrets:
+      DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
