@@ -11,7 +11,7 @@ jobs:
   call-dockerhub-action:
     uses: NelsonDane/DockerHub-Actions/.github/workflows/dockerhub-description.yml@main
     with:
-      dockerhub_repo_name: duplicacy-docker
+      dockerhub_repo_name: ${{ github.repository }}
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
