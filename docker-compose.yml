@@ -10,3 +10,6 @@ services:
     hostname: duplicacy-web-docker
     environment:
       - MACHINE_ID=
+    volumes:
+      - /path/to/config:/root/.duplicacy-web
+      - /path/to/data:/data

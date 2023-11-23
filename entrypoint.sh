@@ -14,6 +14,18 @@ else
     echo "$id" > "$ID_PATH"
 fi
 
+# Test for ~/.duplicacy-web/settings.json
+if [ ! -f ~/.duplicacy-web/settings.json ]; then
+    echo "No settings.json found, creating default..."
+    touch ~/.duplicacy-web/settings.json
+    echo "Created settings.json, using it..."
+    echo "{
+    \"listening_address\": \":3875\"
+}" > ~/.duplicacy-web/settings.json
+else
+    echo "Found settings.json, using it..."
+fi
+
 # Start Duplicacy Web
 echo "Starting Duplicacy..."
 exec /usr/local/bin/duplicacy_web
