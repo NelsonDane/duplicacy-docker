@@ -7,7 +7,6 @@ services:
     restart: always
     ports:
       - 3875:3875
-    network_mode: host
     hostname: duplicacy-web-docker
     environment:
-      - MACHINE_ID=bad478c8260021d90e0452cb636031zz
+      - MACHINE_ID=

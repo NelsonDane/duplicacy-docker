@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Machine ID
 ID_PATH="/var/lib/dbus/machine-id"
 
 echo "Using Hostname: $HOSTNAME"

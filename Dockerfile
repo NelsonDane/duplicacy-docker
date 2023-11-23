@@ -29,7 +29,12 @@ RUN if [ "$(uname -m)" = "x86_64" ]; then \
     ; fi
 RUN chmod +x /usr/local/bin/duplicacy_web
 
+# Settings
+RUN mkdir -p /root/.duplicacy-web
+RUN touch /root/.duplicacy-web/settings.json
+RUN echo '{ "listening_address": "0.0.0.0:3875" }' > /root/.duplicacy-web/settings.json
 RUN mkdir -p /var/lib/dbus
+
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 

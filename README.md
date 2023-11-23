@@ -3,7 +3,7 @@
 This is a Docker image for running [Duplicacy](https://duplicacy.com/), a cross-platform cloud backup tool. At this time, the newest version of Duplicacy is 1.7.2.
 
 ## Usage
-Configure the provided [docker-compose.yml](docker-compose.yml) file to run the container:
+Configure the provided [docker-compose.yml](./docker-compose.yml) file to run the container:
 
 ```bash
 docker-compose up -d
